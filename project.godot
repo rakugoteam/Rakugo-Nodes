@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Rakugo Nodes"
+config/description="No Description"
+config/tags=PackedStringArray("addon", "rakugo")
+config/features=PackedStringArray("4.3")
+config/icon="res://icon.png"
+addons/icon_finder/preview_size=16
+addons/icon_finder/is_docked=false
+
+[autoload]
+
+IconsFonts="*res://addons/icons-fonts/icons_fonts/IconsFonts.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/external_code/plugin.cfg", "res://addons/rakugo-nodes/plugin.cfg")
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

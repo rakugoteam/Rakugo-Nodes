@@ -31,10 +31,6 @@ signal state_changed(state_name: StringName)
 var _toggled := false:
 	get: return _toggled
 
-## If true, on one button in group will be toggled
-## needs toggle_mode = true to works
-@export var radio_mode := false
-
 ## If true, button will be in pressed state
 @export var button_pressed := false:
 	set(value):
@@ -123,7 +119,7 @@ func _gui_input(event: InputEvent) -> void:
 				var t := !_toggled
 				_togglef(null, t)
 				
-				if button_group and radio_mode:
+				if button_group:
 					get_tree().call_group(
 						button_group, "_togglef", self, !t)
 					return

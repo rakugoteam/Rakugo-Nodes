@@ -31,3 +31,8 @@ static func toggle_connection_if_possible(
 	signal_obj: Signal, method: Callable, toggle: bool):
 	if toggle: connect_if_possible(signal_obj, method)
 	else: disconnect_if_possible(signal_obj, method)
+
+## Is shortcut of:
+## [br] return variant if variant else default
+static func get_var(variant, default):
+	return variant if variant else default
